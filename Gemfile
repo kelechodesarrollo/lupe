@@ -16,6 +16,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'bootstrap-sass'
 gem 'high_voltage'
 gem 'paperclip', github: 'thoughtbot/paperclip'
+gem "paperclip-dropbox", ">= 1.1.7"
+gem "figaro"
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_20]
