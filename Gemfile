@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'bootstrap-sass'
 gem 'high_voltage'
+gem 'paperclip', github: 'thoughtbot/paperclip'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_20]

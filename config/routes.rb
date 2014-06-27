@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root :to => "visitors#index"
+  resources :listings
+
+  root :to => "listings#index"
 end
