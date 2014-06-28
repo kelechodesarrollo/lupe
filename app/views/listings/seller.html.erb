@@ -1,0 +1,43 @@
+<table class="table table-hover table-condensed">
+  <thead>
+    <td class="center">Image</td>
+    <td class="center">Name</td>
+    <td class="center">Descripcion</td>
+    <td class="center">Precio</td>
+    <td class="center"></td>
+  </thead>
+    <% @listings.each do |listing| %>
+  <tbody>
+    <td class="center"><%= image_tag listing.image.url(:thumb) %></td>
+    <td class="center"><%= listing.name %></td>
+    <td class="center"><%= listing.description %></td>
+    <td class="center"><%= number_to_currency(listing.price) %></td>
+    <td class="center">
+        <!-- Single button -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Opciones <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li class="center"><%= link_to "Ver", listing, class: "btn btn-link" %></li>
+            <li class="center"><%= link_to "Editar", edit_listing_path(listing), class: "btn btn-link" %></li>
+            <li class="center"><%= link_to "Eliminar", listing, method: :delete, data: { confirm: "Estas seguro?"}, class: "btn btn-link" %></li>
+          </ul>
+        </div>
+        
+        
+        
+    </td>
+  </tbody>
+  <% end -%>
+
+</table>
+
+
+
+
+<br>
+
+<% if user_signed_in? %>
+  <%= link_to 'Nueva Fotito', new_listing_path, class: "btn btn-link" %>
+<% end -%>

@@ -1,4 +1,5 @@
 <% if user_signed_in? %>
+	<li><%= link_to 'Administrar Productos', seller_path %></li>
 	<li><%= link_to 'Editar Perfil', edit_user_registration_path %></li>
 	<li><%= link_to 'Cerrar Sesion', destroy_user_session_path, method: :delete %></li>
 <% else %>
