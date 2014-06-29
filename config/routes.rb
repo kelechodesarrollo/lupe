@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
 
+  root :to => "listings#index"
+
   devise_for :users
   resources :listings do
-  	resources :orders
+  	resources :orders, only: [:new, :create]
   end
 
 
   get 'seller' => 'listings#seller'
-  root :to => "listings#index"
+  get 'sales' => 'orders#sales'
+  get 'purchases' => 'orders#purchases'
+  
 
 end

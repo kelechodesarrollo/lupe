@@ -1,0 +1,31 @@
+<div class="center">
+<h2>Su historial de ventas</h2>
+</div>
+
+<table class="table table-hover table-condensed">
+  <thead>
+    <td class="center">Image</td>
+    <td class="center">Item</td>
+    <td class="center">Price</td>
+    <td class="center">Customer</td>
+    <td class="center">Date Solc</td>
+    <td></td>
+  </thead>
+    <% @orders.each do |order| %>
+  <tbody>
+    <td class="center"><%= image_tag order.listing.image.url(:thumb) %></td>
+    <td class="center"><%= order.listing.name %></td>
+    <td class="center"><%= number_to_currency(order.listing.price) %></td>
+    <td class="center"><%= order.buyer.name %></td>
+    <td class="center"><%= order.created_at.strftime("%d / %m / %y") %></td>
+
+      </tbody>
+  <% end -%>
+
+</table>
+
+<br>
+
+<% if user_signed_in? %>
+  <%= link_to 'Nueva Fotito', new_listing_path, class: "btn btn-link" %>
+<% end -%>
