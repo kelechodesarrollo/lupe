@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+source 'http://code.stripe.com'
+
 ruby '2.0.0'
 gem 'rails', '4.1.1'
 gem 'pg'
@@ -19,6 +21,7 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 gem "paperclip-dropbox", ">= 1.1.7"
 gem "figaro"
 gem "devise"
+gem "stripe"
 
 group :development do
   gem 'better_errors'
