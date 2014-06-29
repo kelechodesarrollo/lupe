@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '4.1.1'
+gem 'pg'
 group :production do
-	gem 'pg'
 	gem 'rails_12factor'
 end
 gem 'sass-rails', '~> 4.0.3'
@@ -19,11 +19,11 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 gem "paperclip-dropbox", ">= 1.1.7"
 gem "figaro"
 gem "devise"
+gem "binding_of_caller"
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_20]
   gem 'quiet_assets'
   gem 'rails_apps_pages'
   gem 'rails_layout'
-  gem 'sqlite3'
 end

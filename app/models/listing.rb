@@ -13,5 +13,5 @@ class Listing < ActiveRecord::Base
     validates :name, :price, :description, presence: true
 
     belongs_to :user
-    
+    has_many   :orders
 end
