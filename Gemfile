@@ -19,11 +19,12 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 gem "paperclip-dropbox", ">= 1.1.7"
 gem "figaro"
 gem "devise"
-gem "binding_of_caller"
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_20]
   gem 'quiet_assets'
   gem 'rails_apps_pages'
   gem 'rails_layout'
+  gem "binding_of_caller"
 end
